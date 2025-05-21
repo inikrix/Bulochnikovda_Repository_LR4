@@ -33,11 +33,17 @@ void enterNumber(int& varLink, string label){
 }
 
 void enterA() {
-
+    enterNumber(a, "A");
+    cout << "Число A успешно сохранено: A = " << a << endl;
 }
 
 void calcS3() {
-
+    if (a == 0) {
+        cout << "Ошибка: число A не введено или равно 0" << endl;
+        return;
+    }
+    double area = (pow(a, 2) * sqrt(3)) / 4;
+    cout << "Площадь равностороннего треугольника со стороной " << a << " равна: " << area << endl;
 }
 
 void calcP3() {
